@@ -1,17 +1,30 @@
 // import { useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import Header from "./compoments/Header/Header";
-import './compoments/Header/Header.css'
+import Header from "./compoments/Header/Header.jsx";
 import Form from "./compoments/Form/Form";
-import './compoments/Form/Form.css'
+import MyProducts from "./compoments/MyProducts/MyProducts";
+import SectionCategories from "./compoments/Categories/SectionCategories";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [showForm, updateShow] = useState(false);
+
+
+
+  const changeShow = () => {
+    updateShow(!showForm);
+  };
 
   return (
     <>
-        <Header />
-        <Form />
+      <Header />
+      {showForm === true ? <Form /> : <div></div>}
+
+      <MyProducts changeShow={changeShow} />
+      <SectionCategories />
+      <SectionCategories />
+      <SectionCategories />
+      <SectionCategories />
     </>
   );
 }

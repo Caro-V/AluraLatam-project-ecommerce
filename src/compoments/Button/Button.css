@@ -1,0 +1,21 @@
+.btnCrear {
+    width: 100%;
+    background-color: #F085B0;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border: none;
+    border-radius: 8px;
+    padding: 16px 10px;
+    font-size: 17px;
+    font-weight: 700px;
+    color: #303A52;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.btnCrear:hover{
+    background-color: #303A52;
+    color: #ffffff;
+    transition: 0.2s;
+
+}
