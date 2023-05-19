@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "../Form/Form.css";
 import FormInputs from "../FormInputs/FormInputs.jsx";
@@ -6,7 +7,7 @@ import OptionsList from "../OptionsList/OptionsList.jsx";
 import "../OptionsList/OptionsList.css";
 import Button from "../Button/Button.jsx";
 
-function Form() {
+function Form(props) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
@@ -60,7 +61,7 @@ function Form() {
             value={description}
             setValue={setDescription}
           />
-          <OptionsList required value={category} setCategory={setCategory} />
+          <OptionsList required value={category} setCategory={setCategory} categories={props.categories} />
           <Button texto="Crear producto" />
         </form>
       </section>

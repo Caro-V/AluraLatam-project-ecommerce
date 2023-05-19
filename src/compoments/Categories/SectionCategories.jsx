@@ -1,13 +1,24 @@
+/* eslint-disable react/prop-types */
 import "../Categories/SectionCategories.css";
+import Producto from "../Producto/Producto";
 
 function SectionCategories(props) {
-  console.log(props);
+  // Opción con Destructuración, se agregaría solo colorSecundario a las llaves
+  // const {colorSecundario, colorPrimario, titulo } = props.category
 
   return (
     <>
-      <section className="category">
-        <h3></h3>
-        <div></div>
+      <section
+        className="category"
+        style={{ backgroundColor: props.category.colorSecundario }}
+      >
+        <h3 style={{ borderColor: props.category.colorPrimario }}>
+          {props.category.titulo}
+        </h3>
+        <div className="producto">
+          <Producto/>
+          <Producto/>
+        </div>
       </section>
     </>
   );
