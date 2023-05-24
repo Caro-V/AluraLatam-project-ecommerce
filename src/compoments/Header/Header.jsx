@@ -39,7 +39,7 @@ function Header() {
                   height="52"
                   role="img"
                   aria-label="Bootstrap"
-                  src="public/img/whiteLogo.png"
+                  src="/img/whiteLogo.png"
                   alt="logo blanco"
                 />
               </a>
@@ -134,7 +134,7 @@ function Header() {
           </div>
         </div>
         <div className="header">
-          <img src="public/img/header.png" />
+          <img src="/img/header.png" />
         </div>
       </header>
     </>
