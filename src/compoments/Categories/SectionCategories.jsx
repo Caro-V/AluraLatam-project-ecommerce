@@ -6,6 +6,7 @@ function SectionCategories(props) {
   // Opción con Destructuración, se agregaría solo colorSecundario a las llaves
   // const {colorSecundario, colorPrimario, titulo } = props.category
 
+  console.log(props);
   return (
     <>
       <section
@@ -15,9 +16,12 @@ function SectionCategories(props) {
         <h3 style={{ borderColor: props.category.colorPrimario }}>
           {props.category.titulo}
         </h3>
-        <div className="producto">
-          <Producto/>
-          <Producto/>
+
+        <div className="productos">
+          <Producto colorPrimario={props.colorPrimario} />
+          <Producto />
+          <Producto />
+          <Producto />
         </div>
       </section>
     </>

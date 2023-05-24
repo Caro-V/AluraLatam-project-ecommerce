@@ -14,6 +14,8 @@ function Form(props) {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
 
+  const {createProduct} = props
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("manejar envio");
@@ -25,7 +27,7 @@ function Form(props) {
       description,
       category
     };
-    console.log(infoForm);
+    createProduct(infoForm);
   };
 
   return (

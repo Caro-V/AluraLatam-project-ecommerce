@@ -5,9 +5,11 @@ import Header from "./compoments/Header/Header.jsx";
 import Form from "./compoments/Form/Form";
 import MyProducts from "./compoments/MyProducts/MyProducts";
 import SectionCategories from "./compoments/Categories/SectionCategories";
+import Footer from "./compoments/Footer/Footer";
 
 function App() {
   const [showForm, updateShow] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const categories = [
     {
@@ -36,15 +38,29 @@ function App() {
     updateShow(!showForm);
   };
 
+  // Registrar un nuevo producto
+  const createProduct = (product) => {
+    console.log("producto nuevo", product);
+    setProducts([...products, product]);
+  };
+
   return (
     <>
       <Header />
-      {showForm === true ? <Form categories={categories.map((category)=> category.titulo)}/> : <div></div>}
+      {showForm === true ? (
+        <Form
+          categories={categories.map((category) => category.titulo)}
+          createProduct={createProduct}
+        />
+      ) : (
+        <div></div>
+      )}
 
       <MyProducts changeShow={changeShow} />
       {categories.map((category) => {
-        return <SectionCategories category={category} key={category.titulo}/>;
+        return <SectionCategories category={category} key={category.titulo} />;
       })}
+      <Footer />
     </>
   );
 }
