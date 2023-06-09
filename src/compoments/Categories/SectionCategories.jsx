@@ -18,10 +18,8 @@ function SectionCategories(props) {
         </h3>
 
         <div className="productos">
-          <Producto colorPrimario={props.colorPrimario} />
-          <Producto />
-          <Producto />
-          <Producto />
+          {/* <Producto colorPrimario={props.colorPrimario} /> */}
+          <Producto url={"/productos"}/>
         </div>
       </section>
     </>

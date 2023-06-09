@@ -1,4 +1,5 @@
 import '../Header/Header.css'
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -29,8 +30,8 @@ function Header() {
         <div className="px-3 py-2 text-white">
           <div className="container">
             <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
               >
                 <img
@@ -42,11 +43,11 @@ function Header() {
                   src="/img/whiteLogo.png"
                   alt="logo blanco"
                 />
-              </a>
+              </Link>
 
               <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="#" className="nav-link text-secondary">
+                  <Link to="/" className="nav-link text-secondary">
                     <svg
                       className="bi d-block mx-auto mb-1"
                       width="24"
@@ -55,10 +56,10 @@ function Header() {
                       <use xlinkHref="#home"></use>
                     </svg>
                     Inicio
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="nav-link text-white">
+                  <Link to="/Comprar" className="nav-link text-white">
                     <svg
                       className="bi d-block mx-auto mb-1"
                       width="24"
@@ -67,10 +68,10 @@ function Header() {
                       <use xlinkHref="#speedometer2"></use>
                     </svg>
                     Comprar
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="nav-link text-white">
+                  <Link to="/Clientes" className="nav-link text-white">
                     <svg
                       className="bi d-block mx-auto mb-1"
                       width="24"
@@ -79,10 +80,10 @@ function Header() {
                       <use xlinkHref="#table"></use>
                     </svg>
                     Clientes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="nav-link text-white">
+                  <Link to="/Contacto" className="nav-link text-white">
                     <svg
                       className="bi d-block mx-auto mb-1"
                       width="24"
@@ -91,10 +92,10 @@ function Header() {
                       <use xlinkHref="#grid"></use>
                     </svg>
                     Contacto
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="nav-link text-white">
+                  <Link to="/Nosotros" className="nav-link text-white">
                     <svg
                       className="bi d-block mx-auto mb-1"
                       width="24"
@@ -103,7 +104,7 @@ function Header() {
                       <use xlinkHref="#people-circle"></use>
                     </svg>
                     Nosotros
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -132,9 +133,6 @@ function Header() {
               </button>
             </div>
           </div>
-        </div>
-        <div className="header">
-          <img src="/img/header.png" />
         </div>
       </header>
     </>
